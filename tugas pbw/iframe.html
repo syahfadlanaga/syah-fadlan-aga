@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Details - Iframe Layout</title>
+  <link rel="stylesheet" href="iframe.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <script>
+    function loadSection(section) {
+      const iframe = document.getElementById('content-frame');
+      iframe.src = section + '.html';
+      // Update active nav link styling
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-section') === section);
+      });
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      // Load default section
+      loadSection('biodata');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Personal Details</h1>
+    </div>
+  </header>
+
+  <div class="container layout">
+    <nav>
+      <ul>
+        <li><a href="javascript:void(0)" data-section="biodata" onclick="loadSection('biodata')">Biodata</a></li>
+        <li><a href="javascript:void(0)" data-section="gallery" onclick="loadSection('gallery')">Gallery</a></li>
+        <li><a href="javascript:void(0)" data-section="jadwalkuliah" onclick="loadSection('jadwalkuliah')">Class Schedule</a></li>
+        <li><a href="javascript:void(0)" data-section="medsos" onclick="loadSection('medsos')">Social Media</a></li>
+        <li><a href="javascript:void(0)" data-section="daftarmakanan" onclick="loadSection('daftarmakanan')">Favorite Food</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <iframe 
+        id="content-frame" 
+        src="" 
+        title="Content Frame" 
+        frameborder="0" 
+        sandbox="allow-scripts allow-same-origin" 
+        aria-label="Content section"
+      ></iframe>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Jane Doe - Personal Introduction</p>
+    </div>
+  </footer>
+</body>
+</html>

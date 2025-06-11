@@ -1,0 +1,154 @@
+/* Root variables for colors and spacing */
+:root {
+    --color-background: #ffffff;
+    --color-primary-text: #111827;
+    --color-secondary-text: #6b7280;
+    --color-card-bg: #20B2AA;
+    --color-shadow: rgba(0, 0, 0, 0.05);
+    --border-radius: 0.75rem;
+    --max-width: 1200px;
+  
+    --font-family-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-size-heading: 48px;
+    --font-size-body: 18px;
+  
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+  }
+  
+  /* Reset and base styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-secondary-text);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: var(--spacing-xl) var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Container to center content with max width */
+  .container {
+    max-width: var(--max-width);
+    width: 100%;
+    background: var(--color-card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  /* Large bold heading */
+  .heading {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-heading);
+    color: var(--color-primary-text);
+    text-align: center;
+    margin: 0;
+    padding-bottom: var(--spacing-md);
+    user-select: none;
+    letter-spacing: 0.03em;
+  }
+  
+  /* Card section containing the table */
+  .card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    padding: var(--spacing-lg);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover,
+  .card:focus-within {
+    box-shadow: 0 8px 24px var(--color-shadow);
+  }
+  
+  .biodata-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    font-size: var(--font-size-body);
+  }
+  
+  .biodata-table tbody tr {
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  
+  .biodata-table tbody tr:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  
+  /* Table header cells for labels */
+  .biodata-table th {
+    text-align: left;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary-text);
+    width: 30%;
+    vertical-align: middle;
+    user-select: text;
+  }
+  
+  /* Table data cells for values */
+  .biodata-table td {
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--color-secondary-text);
+    vertical-align: middle;
+    white-space: pre-wrap;
+    user-select: text;
+  }
+  .biodata-table td:hover {
+    background-color: #20B2AA;
+}
+  
+  /* Footer with subtle style */
+  .footer {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-secondary-text);
+    padding: var(--spacing-md);
+    user-select: none;
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .container {
+      padding: var(--spacing-md);
+    }
+    .heading {
+      font-size: 36px;
+    }
+    .biodata-table th,
+    .biodata-table td {
+      padding: 12px 8px;
+    }
+  }
+  
+  
