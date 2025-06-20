@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Introduction - Iframe Layout</title>
+  <link rel="stylesheet" href="iframe.css" />
+  <link href="iframe.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Personal Details</h1>
+    </div>
+  </header>
+
+  <div class="container layout">
+    <nav>
+      <ul>
+        <li><a href="menudiri.html" target="content-frame">Menu</a></li>
+        <li><a href="biodata.html" target="content-frame">Biodata</a></li>
+        <li><a href="gallery.html" target="content-frame">Gallery</a></li>
+        <li><a href="jadwalkuliah.html" target="content-frame">Jadwal Kuliah</a></li>
+        <li><a href="medsos.html" target="content-frame">Social Media</a></li>
+        <li><a href="daftarmakanan.html" target="content-frame">Daftar Makanan</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <iframe 
+        id="content-frame" 
+        name="content-frame" 
+        src="menudiri.html" 
+        title="Content Frame" 
+        frameborder="0" 
+        sandbox="allow-scripts allow-same-origin" 
+        aria-label="Content section"
+      ></iframe>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Jane Doe - Personal Introduction</p>
+    </div>
+  </footer>
+</body>
+</html>
