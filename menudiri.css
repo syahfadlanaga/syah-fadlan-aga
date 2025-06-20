@@ -1,0 +1,63 @@
+/* Reset dan dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5FFFA; /* Mint Cream */
+    color: #2F4F4F; /* Dark Slate Gray */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    max-width: 700px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(32, 178, 170, 0.3); /* Light Sea Green shadow */
+    animation: fadeIn 1s ease forwards;
+}
+
+h1 {
+    color: #20B2AA; /* Light Sea Green */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #20B2AA;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Animasi sederhana */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Penekanan kata kunci */
+strong {
+    color: #20B2AA;
+    font-weight: 700;
+}
